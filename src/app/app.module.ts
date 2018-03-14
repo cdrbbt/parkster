@@ -10,6 +10,8 @@ import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+import { LoginPage } from './../pages/login/login';
+import { CommentsPage } from './../pages/comments/comments';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -22,6 +24,8 @@ import { MediaProvider } from '../providers/media/media';
     ContactPage,
     HomePage,
     TabsPage,
+    LoginPage,
+    CommentsPage,
     MediaAdressPipe,
     ThumbnailPipe
   ],
@@ -36,7 +40,9 @@ import { MediaProvider } from '../providers/media/media';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    LoginPage,
+    CommentsPage
   ],
   providers: [
     StatusBar,

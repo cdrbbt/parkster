@@ -16,6 +16,10 @@ export class MediaProvider {
     return this.http.get((this.APIurl + 'media?start=' + start + '&limit='+ limit));
   }
 
+  fetchComments(id:number) {
+    return this.http.get((this.APIurl + 'comments/file/' + id));
+  }
+
   constructor(public http: HttpClient) {
     console.log('Hello MediaProvider Provider');
   }
