@@ -1,5 +1,6 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+
 
 /*
   Generated class for the MediaProvider provider.
@@ -19,6 +20,15 @@ export class MediaProvider {
   fetchComments(id:number) {
     return this.http.get((this.APIurl + 'comments/file/' + id));
   }
+
+  postComment(file_id, comment){
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'x-access-token': localStorage.getItem('token')
+      })}
+
+      return this.http.post((this.APIurl + 'comments'), {'file_id': file_id, 'comment': comment}, httpOptions)
+  };
 
   constructor(public http: HttpClient) {
     console.log('Hello MediaProvider Provider');

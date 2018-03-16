@@ -19,6 +19,11 @@ export class CommentsPage {
   image: any;
   comments: any;
 
+  postComment(a){
+    this.mediaProvider.postComment(this.image.file_id,a).subscribe(res => console.log(res));
+    console.log(a);
+  }
+
   constructor(public navCtrl: NavController, public navParams: NavParams, private mediaProvider :MediaProvider) {
     this.image = navParams.get('image');
   }

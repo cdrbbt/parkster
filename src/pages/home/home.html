@@ -8,8 +8,11 @@
 
   <ion-card *ngFor="let image of imageData" (click) = "move(image)">
       <ion-card-header>
-        {{image.filename}}
+        {{image.title}}
       </ion-card-header>
+      <ion-card-content>
+        {{image.description}}
+      </ion-card-content>
     <img [src]="image.filename | thumbnail | mediaAdress"/>
   </ion-card>
 

@@ -12,7 +12,11 @@
 
 </ion-header>
 
-
 <ion-content padding>
-  <p *ngFor =  "let comment of comments">{{comment.comment}}</p>
+  <ion-list>
+    <p *ngFor="let comment of comments">{{comment.comment}}</p>
+  </ion-list>
+
+  <input ion-input #com>
+  <button ion-button (click) = "postComment(com.value)">Post</button>
 </ion-content>
