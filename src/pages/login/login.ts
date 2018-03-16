@@ -22,7 +22,7 @@ export class LoginPage {
   login(username: string, password: string){
     console.log('test');
     console.log(username + password);
-    this.authenticationProvider.login(username,password).subscribe(response =>{
+    this.authenticationProvider.login(username,password).subscribe((response: any) =>{
       console.log(response);
       localStorage.setItem('token', response.token);
       console.log(localStorage.getItem('token'));

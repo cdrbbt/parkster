@@ -1,3 +1,4 @@
+import { UploadPage } from './../pages/upload/upload';
 import { ThumbnailPipe } from './../pipes/thumbnail/thumbnail';
 import { MediaAdressPipe } from './../pipes/media-adress/media-adress';
 import { NgModule, ErrorHandler } from '@angular/core';
@@ -29,7 +30,8 @@ import { AuthenticationProvider } from '../providers/authentication/authenticati
     LoginPage,
     CommentsPage,
     MediaAdressPipe,
-    ThumbnailPipe
+    ThumbnailPipe,
+    UploadPage
   ],
   imports: [
     BrowserModule,
@@ -44,7 +46,8 @@ import { AuthenticationProvider } from '../providers/authentication/authenticati
     HomePage,
     TabsPage,
     LoginPage,
-    CommentsPage
+    CommentsPage,
+    UploadPage
   ],
   providers: [
     StatusBar,

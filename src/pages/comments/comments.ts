@@ -19,9 +19,13 @@ export class CommentsPage {
   image: any;
   comments: any;
 
-  postComment(a){
-    this.mediaProvider.postComment(this.image.file_id,a).subscribe(res => console.log(res));
-    console.log(a);
+  postComment(comment){
+    this.mediaProvider.postComment(this.image.file_id,comment).subscribe(res => this.getComments());
+    console.log(comment);
+  }
+
+  getComments(){
+    this.mediaProvider.fetchComments(this.image.file_id).subscribe(res => this.comments = res);
   }
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private mediaProvider :MediaProvider) {
@@ -30,7 +34,7 @@ export class CommentsPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CommentsPage');
-    this.mediaProvider.fetchComments(this.image.file_id).subscribe(res => this.comments = res);
+    this.getComments();
   }
 
 }
