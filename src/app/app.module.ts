@@ -19,6 +19,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { MediaProvider } from '../providers/media/media';
 import { AuthenticationProvider } from '../providers/authentication/authentication';
+import { RegisterPage } from '../pages/register/register';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { AuthenticationProvider } from '../providers/authentication/authenticati
     CommentsPage,
     MediaAdressPipe,
     ThumbnailPipe,
-    UploadPage
+    UploadPage,
+    RegisterPage
   ],
   imports: [
     BrowserModule,
@@ -47,7 +49,8 @@ import { AuthenticationProvider } from '../providers/authentication/authenticati
     TabsPage,
     LoginPage,
     CommentsPage,
-    UploadPage
+    UploadPage,
+    RegisterPage
   ],
   providers: [
     StatusBar,

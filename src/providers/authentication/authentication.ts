@@ -18,8 +18,6 @@ export class AuthenticationProvider {
 
   register(username: string, password: string, email: string){
     return this.http.post((this.APIurl + 'users/'),{'username': username, 'password': password, 'email': email})
-    .subscribe(response => console.log(response), error => {});
-    ;
   }
 
   constructor(public http: HttpClient) {

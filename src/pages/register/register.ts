@@ -16,11 +16,23 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class RegisterPage {
 
-  register(a,b,c){
+  message: string;
+  btnClick: boolean = false; 
+
+  register(login,password,email){
     console.log('test');
-    console.log(a + b);
-    this.authenticationProvider.register(a,b,c);
-    return null;
+    console.log(login + password);
+    this.authenticationProvider.register(login,password,email).
+    subscribe(response => {
+      console.log(response);
+      this.message = 'Account created, go back to login screen';
+      this.btnClick = true;
+    },
+    error => {
+      console.log(error.error.error);
+      this.message = error.error.error;
+      this.btnClick = true;
+    });
   }
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private authenticationProvider: AuthenticationProvider) {

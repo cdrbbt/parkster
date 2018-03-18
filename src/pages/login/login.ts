@@ -3,6 +3,7 @@ import { HomePage } from './../home/home';
 import { AuthenticationProvider } from './../../providers/authentication/authentication';
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { RegisterPage } from '../register/register';
 
 /**
  * Generated class for the LoginPage page.
@@ -29,6 +30,10 @@ export class LoginPage {
       this.error = false;
       this.navCtrl.push(TabsPage);
     } , error => {this.error = true});
+  }
+
+  register(){
+    this.navCtrl.push(RegisterPage)
   }
 
 
