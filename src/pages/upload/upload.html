@@ -16,6 +16,8 @@
 
 <input type="file" #fl (change) = test($event)>
 
-<button ion-button (click) = "test(fl.files)">Upload</button>
+<button ion-button (click) = "upload()">Upload</button>
+
+<ion-item *ngIf="uploadMessage">{{uploadMessage}}</ion-item>
 
 </ion-content>

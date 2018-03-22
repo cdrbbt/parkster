@@ -14,10 +14,10 @@
 
 <ion-content padding>
   <ion-list>
-      <ion-card *ngFor="let comment of comments">
+      <ion-card *ngFor="let comment of comments" color = "primary-light">
 
           <ion-card-header>
-            {{comment.user_id}}
+            {{comment.username}}
           </ion-card-header>
         
           <ion-card-content>

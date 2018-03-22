@@ -32,19 +32,25 @@ export class MediaProvider {
   };
 
   uploadMedia(formData) {
-
     const httpOptions = {
       headers: new HttpHeaders({
         'x-access-token': localStorage.getItem('token')
       })
     }
-
-
     return this.http.post((this.APIurl + 'media'),formData, httpOptions)
   }
 
   constructor(public http: HttpClient) {
     console.log('Hello MediaProvider Provider');
   }
+
+  getUser(user_id) {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'x-access-token': localStorage.getItem('token')
+      })
+    }
+    return this.http.get((this.APIurl + 'users/'+ user_id), httpOptions)
+  };
 
 }

@@ -15,6 +15,10 @@ export class HomePage {
     this.mediaProvider.fetchImages().subscribe(res => (this.imageData = res));
   }
 
+  ionViewWillEnter(){
+    this.mediaProvider.fetchImages().subscribe(res => (this.imageData = res));
+  }
+
 move(image:any)
 {this.navCtrl.push(CommentsPage, {image:image})}
 

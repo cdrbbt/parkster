@@ -6,7 +6,7 @@
 
 <ion-content padding>
 
-  <ion-card *ngFor="let image of imageData" (click) = "move(image)">
+  <ion-card *ngFor="let image of imageData" (click) = "move(image)" color="primary-light">
       <ion-card-header>
         {{image.title}}
       </ion-card-header>
